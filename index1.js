@@ -4,13 +4,13 @@ for (let tag = "#"; tag.length <= 7; tag += "#"){
 
 
 for (let i = 1; i<=100; i++){
-    if (i % 3 == 0 && i % 5 == 0){
+    if (i % 3 === 0 && i % 5 === 0){
       console.log("FizzBuzz");
     }
-    else if (i % 3 == 0 && !(i % 5 == 0)){ // fizz
+    else if (i % 3 === 0 && !(i % 5 === 0)){ // fizz
       console.log("Fizz");
     }
-    else if (!(i % 3 == 0) && i % 5  == 0){
+    else if (!(i % 3 === 0) && i % 5 === 0){
       console.log("Buzz");
     }
     else{
@@ -25,7 +25,7 @@ for (let i = 1; i<=100; i++){
 let row = "# # # #"
 
 for (let i = 1; i < 9; i++){
-    if (i % 2 == 1){
+    if (i % 2 === 1){
         console.log(" " + row);
     }
     else{
@@ -41,7 +41,7 @@ let board = "";
 
 for (let y = 0; y < size; y++) {
   for (let x = 0; x < size; x++) {
-    if ((x + y) % 2 == 0) {
+    if ((x + y) % 2 === 0) {
       board += " ";
     } else {
       board += "#";
@@ -51,5 +51,26 @@ for (let y = 0; y < size; y++) {
 }
 
 console.log(board);
+
+// bindings
+
+var a = 10; // global scope
+
+if (a === 10){
+  var a = 12;
+  console.log(a)
+}
+
+
+let b = 10; // function scoped
+
+if (b === 10){
+  let b = 12;
+  console.log(b);
+}
+
+
+
+const c = 10; // const = constant; cannot redefine anywhere
 
    
