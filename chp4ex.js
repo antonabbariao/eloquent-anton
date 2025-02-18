@@ -41,7 +41,7 @@ function hasDuplicates(nums){
     let list = createCounter(nums);
     let listKeys = Object.keys(list)
     for (let value of listKeys){
-        if (list[value] === 2){
+        if (list[value] > 1){
             return true;
         }
     }
@@ -49,3 +49,18 @@ function hasDuplicates(nums){
 }
 
 console.log(hasDuplicates([1,134,2,3]));
+
+function hasDuplicates2(nums){
+    // a set contains unique value MDN
+    const seen = new Set();
+
+    for (const num of nums){
+        if (seen.has(num)){
+            return true;
+        }
+
+        seen.add(num);
+    }
+
+    return false;
+}

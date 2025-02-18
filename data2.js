@@ -128,6 +128,19 @@ function deepEqual(a, b){ // ??
     
 }
 
+function listToArray(list){
+    let curr = list
+    const result = []
+
+    while (curr !== null){
+        const { value, rest } = curr
+        result.push(value)
+        curr = rest
+    }
+
+    return result
+}
+
 
 
  
